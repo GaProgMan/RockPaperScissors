@@ -3,7 +3,7 @@ RockPaperScissors
 
 Basic Rock Paper Scissors game implemented in C#
 
-## Game Loop
+### Game Loop
 
 * The user is asked to enter their guess.
 * A "random" number between 1 and 3 is generated, these map to Rock, Paper and Scissors (respectively)
