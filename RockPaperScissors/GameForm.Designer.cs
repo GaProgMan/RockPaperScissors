@@ -28,16 +28,20 @@
       /// </summary>
       private void InitializeComponent()
       {
+         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameForm));
          this.grpResults = new System.Windows.Forms.GroupBox();
          this.rtbResults = new System.Windows.Forms.RichTextBox();
          this.drpAvailableMoves = new System.Windows.Forms.ComboBox();
          this.lblUSerMoveHEader = new System.Windows.Forms.Label();
          this.btnUseMove = new System.Windows.Forms.Button();
+         this.pbRules = new System.Windows.Forms.PictureBox();
          this.grpResults.SuspendLayout();
+         ((System.ComponentModel.ISupportInitialize)(this.pbRules)).BeginInit();
          this.SuspendLayout();
          // 
          // grpResults
          // 
+         this.grpResults.Controls.Add(this.pbRules);
          this.grpResults.Controls.Add(this.rtbResults);
          this.grpResults.Location = new System.Drawing.Point(12, 39);
          this.grpResults.Name = "grpResults";
@@ -51,7 +55,7 @@
          this.rtbResults.Location = new System.Drawing.Point(6, 19);
          this.rtbResults.Name = "rtbResults";
          this.rtbResults.ReadOnly = true;
-         this.rtbResults.Size = new System.Drawing.Size(448, 158);
+         this.rtbResults.Size = new System.Drawing.Size(222, 158);
          this.rtbResults.TabIndex = 0;
          this.rtbResults.Text = "";
          // 
@@ -83,6 +87,16 @@
          this.btnUseMove.UseVisualStyleBackColor = true;
          this.btnUseMove.Click += new System.EventHandler(this.btnUseMove_Click);
          // 
+         // pbRules
+         // 
+         this.pbRules.Image = ((System.Drawing.Image)(resources.GetObject("pbRules.Image")));
+         this.pbRules.Location = new System.Drawing.Point(262, 17);
+         this.pbRules.Name = "pbRules";
+         this.pbRules.Size = new System.Drawing.Size(160, 160);
+         this.pbRules.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+         this.pbRules.TabIndex = 1;
+         this.pbRules.TabStop = false;
+         // 
          // GameForm
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -92,10 +106,12 @@
          this.Controls.Add(this.lblUSerMoveHEader);
          this.Controls.Add(this.drpAvailableMoves);
          this.Controls.Add(this.grpResults);
+         this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
          this.Name = "GameForm";
          this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          this.Text = "Rock, Paper, Scissors, Lizard, Spock";
          this.grpResults.ResumeLayout(false);
+         ((System.ComponentModel.ISupportInitialize)(this.pbRules)).EndInit();
          this.ResumeLayout(false);
          this.PerformLayout();
 
@@ -108,5 +124,6 @@
       private System.Windows.Forms.ComboBox drpAvailableMoves;
       private System.Windows.Forms.Label lblUSerMoveHEader;
       private System.Windows.Forms.Button btnUseMove;
+      private System.Windows.Forms.PictureBox pbRules;
    }
 }
