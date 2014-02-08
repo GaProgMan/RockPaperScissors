@@ -96,6 +96,7 @@
          this.pbRules.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
          this.pbRules.TabIndex = 1;
          this.pbRules.TabStop = false;
+         this.pbRules.MouseHover += new System.EventHandler(this.pbRules_MouseHover);
          // 
          // GameForm
          // 

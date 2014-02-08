@@ -108,5 +108,11 @@ namespace RockPaperScissors
                throw new Exception("Random value generated was not as expected");
          }
       }
+
+      private void pbRules_MouseHover(object sender, EventArgs e)
+      {
+         ToolTip ttPictureToolTip = new ToolTip();
+         ttPictureToolTip.SetToolTip(this.pbRules, "Image courtesy of Wikipedia");
+      }
    }
 }
