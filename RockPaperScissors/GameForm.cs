@@ -43,12 +43,14 @@ namespace RockPaperScissors
          cpuMove = generateGuess();
          currentRound = new Round(userMove, cpuMove);
 
-         // Write the result of this round to the log
-         rtbResults.AppendText(currentRound.ToString());
-
          // Add the data from this round to the list of previous
          // rounds
          gameData.Add(currentRound);
+
+         // Write the result of this round to the log
+         rtbResults.AppendText("Game number: " + gameData.Count + Environment.NewLine);
+         rtbResults.AppendText("______________" + Environment.NewLine);
+         rtbResults.AppendText(currentRound.ToString() + Environment.NewLine);
       }
 
       /// <summary>
