@@ -5,6 +5,10 @@ Basic "Rock, Paper, Scissors, Lizard, Spock" game implemented in C#.
 
 The rules for "Rock, Paper, Scissors, Lizard, Spock" can be viewed on wikipedia at this link: http://en.wikipedia.org/wiki/Rock-paper-scissors-lizard-Spock
 
+A pictorial version of the rules can be seen in the following image (via wikipedia)
+
+!["Rock, Paper, Scissors, Lizard, Spock" rules](http://en.wikipedia.org/wiki/File:Rock_Paper_Scissors_Lizard_Spock_en.svg "Rock, Paper, Scissors, Lizard, Spock" rules)
+
 Game Loop
 ---------
 
