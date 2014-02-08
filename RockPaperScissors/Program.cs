@@ -10,8 +10,8 @@ namespace RockPaperScissors
    {
       static void Main(string[] args)
       {
-            GameForm newGameForm = new GameForm();
-            newGameForm.ShowDialog();
+         GameForm newGameForm = new GameForm();
+         newGameForm.ShowDialog();
       }
    }
 }
