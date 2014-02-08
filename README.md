@@ -7,7 +7,7 @@ The rules for "Rock, Paper, Scissors, Lizard, Spock" can be viewed on wikipedia 
 
 A pictorial version of the rules can be seen in the following image (via wikipedia)
 
-!["Rock, Paper, Scissors, Lizard, Spock" rules](http://en.wikipedia.org/wiki/File:Rock_Paper_Scissors_Lizard_Spock_en.svg "Rock, Paper, Scissors, Lizard, Spock" rules)
+!["Rock, Paper, Scissors, Lizard, Spock" rules](http://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Rock_Paper_Scissors_Lizard_Spock_en.svg/500px-Rock_Paper_Scissors_Lizard_Spock_en.svg.png)
 
 Game Loop
 ---------
