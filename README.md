@@ -1,6 +1,9 @@
 RockPaperScissors
 =================
 
+Short Description
+-----------------
+
 Basic "Rock, Paper, Scissors, Lizard, Spock" game implemented in C#.
 
 The rules for "Rock, Paper, Scissors, Lizard, Spock" can be viewed on wikipedia at this link: http://en.wikipedia.org/wiki/Rock-paper-scissors-lizard-Spock
@@ -20,3 +23,10 @@ Game Loop
 * The details from the round are added to a list of rounds
 
 When the user enters a "q", the game loop exits. Once the game loop has exited, each round is dumped to the console as a formatted string.
+
+Compiled Binary Download
+------------------------
+
+I have prepared a pre-compiled x86 binary for Microsoft Windows at the following link: http://gaprogman.com/CompiledBinaries/RockPaperScissors.zip
+
+It was compiled using Microsoft Visual Studio 2013 (version 12.0.21005.1 REL) against .NET version 4.5.50938. In order to run this binary, you may need to upgrade the version of the .NET framework that your computer is running.
