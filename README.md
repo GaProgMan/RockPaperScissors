@@ -27,6 +27,6 @@ When the user enters a "q", the game loop exits. Once the game loop has exited, 
 Compiled Binary Download
 ------------------------
 
-I have prepared a pre-compiled x86 binary for Microsoft Windows at the following link: http://gaprogman.com/CompiledBinaries/RockPaperScissors.zip
+I have prepared a pre-compiled x86 binary for Microsoft Windows within a compressed zip file at the following link: http://gaprogman.com/CompiledBinaries/RockPaperScissors.zip
 
 It was compiled using Microsoft Visual Studio 2013 (version 12.0.21005.1 REL) against .NET version 4.5.50938. In order to run this binary, you may need to upgrade the version of the .NET framework that your computer is running.
