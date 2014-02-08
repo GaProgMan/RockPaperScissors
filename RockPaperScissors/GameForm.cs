@@ -73,7 +73,7 @@ namespace RockPaperScissors
             case "Spock":
                return Round.moves.Spock;
             default:
-               return Round.moves.q;
+               throw new Exception("Move name cannot be found for user inputted value (" + inUserInput + ")");
          }
       }
 

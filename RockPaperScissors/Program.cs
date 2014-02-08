@@ -11,7 +11,7 @@ namespace RockPaperScissors
    /// </summary>
    public class Round
    {
-      public enum moves { Rock, Paper, Scissors, Lizard, Spock, q };
+      public enum moves { Rock, Paper, Scissors, Lizard, Spock };
 
       private moves _userMove;
       private moves _cpuMove;
