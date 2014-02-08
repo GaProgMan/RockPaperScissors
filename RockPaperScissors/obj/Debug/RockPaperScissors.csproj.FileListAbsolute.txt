@@ -1,8 +1,0 @@
-C:\Users\GaProgMan\codeProjects\RockPaperScissors\RockPaperScissors\bin\Debug\RockPaperScissors.exe.config
-C:\Users\GaProgMan\codeProjects\RockPaperScissors\RockPaperScissors\bin\Debug\RockPaperScissors.exe
-C:\Users\GaProgMan\codeProjects\RockPaperScissors\RockPaperScissors\bin\Debug\RockPaperScissors.pdb
-C:\Users\GaProgMan\codeProjects\RockPaperScissors\RockPaperScissors\obj\Debug\RockPaperScissors.csprojResolveAssemblyReference.cache
-C:\Users\GaProgMan\codeProjects\RockPaperScissors\RockPaperScissors\obj\Debug\RockPaperScissors.exe
-C:\Users\GaProgMan\codeProjects\RockPaperScissors\RockPaperScissors\obj\Debug\RockPaperScissors.pdb
-C:\Users\GaProgMan\codeProjects\RockPaperScissors\RockPaperScissors\obj\Debug\RockPaperScissors.GameForm.resources
-C:\Users\GaProgMan\codeProjects\RockPaperScissors\RockPaperScissors\obj\Debug\RockPaperScissors.csproj.GenerateResource.Cache
