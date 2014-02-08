@@ -51,6 +51,9 @@ namespace RockPaperScissors
          rtbResults.AppendText("Game number: " + gameData.Count + Environment.NewLine);
          rtbResults.AppendText("______________" + Environment.NewLine);
          rtbResults.AppendText(currentRound.ToString() + Environment.NewLine);
+
+         // Ensure we scroll to the end of the line
+         rtbResults.ScrollToCaret();
       }
 
       /// <summary>
