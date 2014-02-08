@@ -15,14 +15,14 @@ A pictorial version of the rules can be seen in the following image (via wikiped
 Game Loop
 ---------
 
-* The user is asked to enter their guess.
+* The user is asked to pick their move from a list of available moves.
 * A "random" number between 1 and 5 is generated, these map to Rock, Paper, Scissors, Lizard or Spock (respectively)
-* The number is used to represent the CPU guess
-* Both the user and CPU guesses are used to generate the outcome of the round
+* The number is used to represent the CPU move
+* Both the user and CPU moves are used to generate the outcome of the round
 * The outcome of the round is dumped to the console
 * The details from the round are added to a list of rounds
 
-When the user enters a "q", the game loop exits. Once the game loop has exited, each round is dumped to the console as a formatted string.
+The game continues until the user/player closes the main game form.
 
 Compiled Binary Download
 ------------------------
