@@ -143,7 +143,7 @@ namespace RockPaperScissors
          data += "\tPaper usage (%):"     + ((float)this.PaperCPU / (float)this.games) * 100 + Environment.NewLine;
          data += "\tScissors usage (%): " + ((float)this.ScissorsCPU / (float)this.games) * 100 + Environment.NewLine;
          data += "\tLizard usage (%): "   + ((float)this.LizardCPU / (float)this.games) * 100 + Environment.NewLine;
-         data += "\tSpock usage (%): "    + ((float)this.SpockCPU / (float)this.games) * 100 + Environment.NewLine + Environment.NewLine;
+         data += "\tSpock usage (%): "    + ((float)this.SpockCPU / (float)this.games) * 100;
 
          return data;
       }
