@@ -30,11 +30,12 @@
       {
          System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameForm));
          this.grpResults = new System.Windows.Forms.GroupBox();
+         this.pbRules = new System.Windows.Forms.PictureBox();
          this.rtbResults = new System.Windows.Forms.RichTextBox();
          this.drpAvailableMoves = new System.Windows.Forms.ComboBox();
          this.lblUSerMoveHEader = new System.Windows.Forms.Label();
          this.btnUseMove = new System.Windows.Forms.Button();
-         this.pbRules = new System.Windows.Forms.PictureBox();
+         this.btnGenerateStats = new System.Windows.Forms.Button();
          this.grpResults.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.pbRules)).BeginInit();
          this.SuspendLayout();
@@ -49,6 +50,17 @@
          this.grpResults.TabIndex = 0;
          this.grpResults.TabStop = false;
          this.grpResults.Text = "Results";
+         // 
+         // pbRules
+         // 
+         this.pbRules.Image = ((System.Drawing.Image)(resources.GetObject("pbRules.Image")));
+         this.pbRules.Location = new System.Drawing.Point(262, 17);
+         this.pbRules.Name = "pbRules";
+         this.pbRules.Size = new System.Drawing.Size(160, 160);
+         this.pbRules.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+         this.pbRules.TabIndex = 1;
+         this.pbRules.TabStop = false;
+         this.pbRules.MouseHover += new System.EventHandler(this.pbRules_MouseHover);
          // 
          // rtbResults
          // 
@@ -79,30 +91,31 @@
          // 
          // btnUseMove
          // 
-         this.btnUseMove.Location = new System.Drawing.Point(347, 10);
+         this.btnUseMove.Location = new System.Drawing.Point(372, 10);
          this.btnUseMove.Name = "btnUseMove";
-         this.btnUseMove.Size = new System.Drawing.Size(125, 23);
+         this.btnUseMove.Size = new System.Drawing.Size(100, 23);
          this.btnUseMove.TabIndex = 3;
          this.btnUseMove.Text = "Perform Move";
          this.btnUseMove.UseVisualStyleBackColor = true;
          this.btnUseMove.Click += new System.EventHandler(this.btnUseMove_Click);
          // 
-         // pbRules
+         // btnGenerateStats
          // 
-         this.pbRules.Image = ((System.Drawing.Image)(resources.GetObject("pbRules.Image")));
-         this.pbRules.Location = new System.Drawing.Point(262, 17);
-         this.pbRules.Name = "pbRules";
-         this.pbRules.Size = new System.Drawing.Size(160, 160);
-         this.pbRules.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-         this.pbRules.TabIndex = 1;
-         this.pbRules.TabStop = false;
-         this.pbRules.MouseHover += new System.EventHandler(this.pbRules_MouseHover);
+         this.btnGenerateStats.Enabled = false;
+         this.btnGenerateStats.Location = new System.Drawing.Point(266, 10);
+         this.btnGenerateStats.Name = "btnGenerateStats";
+         this.btnGenerateStats.Size = new System.Drawing.Size(100, 23);
+         this.btnGenerateStats.TabIndex = 4;
+         this.btnGenerateStats.Text = "Generate Stats";
+         this.btnGenerateStats.UseVisualStyleBackColor = true;
+         this.btnGenerateStats.Visible = false;
          // 
          // GameForm
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          this.ClientSize = new System.Drawing.Size(484, 234);
+         this.Controls.Add(this.btnGenerateStats);
          this.Controls.Add(this.btnUseMove);
          this.Controls.Add(this.lblUSerMoveHEader);
          this.Controls.Add(this.drpAvailableMoves);
@@ -126,5 +139,6 @@
       private System.Windows.Forms.Label lblUSerMoveHEader;
       private System.Windows.Forms.Button btnUseMove;
       private System.Windows.Forms.PictureBox pbRules;
+      private System.Windows.Forms.Button btnGenerateStats;
    }
 }
