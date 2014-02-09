@@ -133,5 +133,35 @@ namespace RockPaperScissors
          data += "Result:\t\t" + getResult() + Environment.NewLine;
          return data;
       }
+
+      /// <summary>
+      /// Accessor and mutator for _userMove
+      /// </summary>
+      public moves UsersMove
+      {
+         get
+         {
+            return this._userMove;
+         }
+         set
+         {
+            this._userMove = value;
+         }
+      }
+
+      /// <summary>
+      /// Accessor and Mutator for _cpuMove
+      /// </summary>
+      public moves CpuMove
+      {
+         get
+         {
+            return this._cpuMove;
+         }
+         set
+         {
+            this._cpuMove = value;
+         }
+      }
    }
 }
