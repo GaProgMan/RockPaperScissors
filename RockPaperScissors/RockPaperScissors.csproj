@@ -95,6 +95,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Round.cs" />
+    <Compile Include="Stats.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
