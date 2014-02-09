@@ -12,9 +12,11 @@ namespace RockPaperScissors
    public class Round
    {
       public enum moves { Rock, Paper, Scissors, Lizard, Spock };
+      public enum result { Win, Loss, Draw };
 
       private moves _userMove;
       private moves _cpuMove;
+      private result _result;
 
       public Round(moves inUserMove, moves inCpuMove)
       {
@@ -22,46 +24,101 @@ namespace RockPaperScissors
          this._cpuMove = inCpuMove;
       }
 
+      ///// <summary>
+      ///// Used to calculate the result of the current round
+      ///// </summary>
+      ///// <returns>A string (either "user" or "cpu") which represents the winner of the round</returns>
+      //public string getResult()
+      //{
+      //   switch (_userMove)
+      //   {
+      //      case moves.Rock:
+      //         if (_cpuMove == moves.Scissors || _cpuMove == moves.Lizard)
+      //            return "User";
+      //         else if (_cpuMove == moves.Spock || _cpuMove == moves.Paper)
+      //            return "Cpu";
+      //         break;
+      //      case moves.Paper:
+      //         if (_cpuMove == moves.Rock || _cpuMove == moves.Spock)
+      //            return "User";
+      //         else if (_cpuMove == moves.Lizard || _cpuMove == moves.Scissors)
+      //            return "Cpu";
+      //         break;
+      //      case moves.Scissors:
+      //         if (_cpuMove == moves.Paper || _cpuMove == moves.Lizard)
+      //            return "User";
+      //         else if (_cpuMove == moves.Spock || _cpuMove == moves.Rock)
+      //            return "Cpu";
+      //         break;
+      //      case moves.Lizard:
+      //         if (_cpuMove == moves.Paper || _cpuMove == moves.Spock)
+      //            return "User";
+      //         else if (_cpuMove == moves.Scissors || _cpuMove == moves.Rock)
+      //            return "Cpu";
+      //         break; ;
+      //      case moves.Spock:
+      //         if (_cpuMove == moves.Scissors || _cpuMove == moves.Rock)
+      //            return "User";
+      //         else if (_cpuMove == moves.Paper || _cpuMove == moves.Lizard)
+      //            return "Cpu";
+      //         break;
+      //   }
+      //   return "Draw";
+      //}
+
       /// <summary>
-      /// Used to calculate the result of the current round
+      /// Calculates and returns the result fo the current round
       /// </summary>
-      /// <returns>A string (either "user" or "cpu") which represents the winner of the round</returns>
-      public string getResult()
+      /// <returns>The result fo the current round</returns>
+      public result getResult()
+      {
+         generateResult();
+         return this._result;
+      }
+
+      /// <summary>
+      /// Used to calculate the result of the current round - storing
+      /// it in the local restul variable
+      /// </summary>
+      public void generateResult()
       {
          switch (_userMove)
          {
             case moves.Rock:
                if (_cpuMove == moves.Scissors || _cpuMove == moves.Lizard)
-                  return "User";
+                  this._result = result.Win;
                else if (_cpuMove == moves.Spock || _cpuMove == moves.Paper)
-                  return "Cpu";
+                  this._result = result.Loss;
                break;
             case moves.Paper:
                if (_cpuMove == moves.Rock || _cpuMove == moves.Spock)
-                  return "User";
+                  this._result = result.Win;
                else if (_cpuMove == moves.Lizard || _cpuMove == moves.Scissors)
-                  return "Cpu";
+                  this._result = result.Loss;
                break;
             case moves.Scissors:
                if (_cpuMove == moves.Paper || _cpuMove == moves.Lizard)
-                  return "User";
+                  this._result = result.Win;
                else if (_cpuMove == moves.Spock || _cpuMove == moves.Rock)
-                  return "Cpu";
+                  this._result = result.Loss;
                break;
             case moves.Lizard:
                if (_cpuMove == moves.Paper || _cpuMove == moves.Spock)
-                  return "User";
+                  this._result = result.Win;
                else if (_cpuMove == moves.Scissors || _cpuMove == moves.Rock)
-                  return "Cpu";
+                  this._result = result.Loss;
                break; ;
             case moves.Spock:
                if (_cpuMove == moves.Scissors || _cpuMove == moves.Rock)
-                  return "User";
+                  this._result = result.Win;
                else if (_cpuMove == moves.Paper || _cpuMove == moves.Lizard)
-                  return "Cpu";
+                  this._result = result.Loss;
+               break;
+            default:
+               this._result = result.Draw;
                break;
          }
-         return "Draw";
+         
       }
 
       /// <summary>
