@@ -8,6 +8,8 @@ namespace RockPaperScissors
 {
    public class Stats
    {
+      #region properties
+
       private int _winsField;
       private int _lossesField;
       private int _drawsField;
@@ -23,6 +25,8 @@ namespace RockPaperScissors
       private int _scissorsUser;
       private int _lizardUser;
       private int _spockUser;
+
+      #endregion
 
       /// <summary>
       /// Default constructor
@@ -110,6 +114,8 @@ namespace RockPaperScissors
          }
       }
 
+      #region Wins, Losses and Draws accessors and mutators
+
       /// <summary>
       /// Accessor and mutator for _winsField
       /// </summary>
@@ -154,6 +160,8 @@ namespace RockPaperScissors
             this._drawsField = value;
          }
       }
+
+      #endregion
 
       #region CPU usage accessors and mutators
 
