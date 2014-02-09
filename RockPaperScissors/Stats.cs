@@ -13,6 +13,7 @@ namespace RockPaperScissors
       private int _winsField;
       private int _lossesField;
       private int _drawsField;
+      private int _numberOfGames;
 
       private int _rockCPU;
       private int _paperCPU;
@@ -36,6 +37,7 @@ namespace RockPaperScissors
          this._winsField = 0;
          this._lossesField = 0;
          this._drawsField = 0;
+         this._numberOfGames = 0;
 
          this._rockCPU = 0;
          this._scissorsCPU = 0;
@@ -54,21 +56,23 @@ namespace RockPaperScissors
       /// Used to generate the stats for the given game data
       /// </summary>
       /// <param name="inGameData">An array of game data to generate stats from</param>
-      public void generateStats(Round[] inGameData)
+      public void generateStats(List<Round> inGameData)
       {
+         games = inGameData.Count;
+
          // Calculate outcome (wins, losses and draws) stats
          foreach (Round game in inGameData)
          {
             switch (game.getResult())
             {
                case Round.result.Win:
-                  ++this._winsField;
+                  ++wins;
                   break;
                case Round.result.Loss:
-                  ++this._lossesField;
+                  ++losses;
                   break;
                case Round.result.Draw:
-                  ++this._drawsField;
+                  ++draws;
                   break;
             }
 
@@ -76,19 +80,19 @@ namespace RockPaperScissors
             switch (game.UsersMove)
             {
                case Round.moves.Rock:
-                  ++this._rockUser;
+                  ++RockUser;
                   break;
                case Round.moves.Paper:
-                  ++this._paperUser;
+                  ++PaperUser;
                   break;
                case Round.moves.Scissors:
-                  ++this._scissorsUser;
+                  ++ScissorsUser;
                   break;
                case Round.moves.Lizard:
-                  ++this._lizardUser;
+                  ++LizardUser;
                   break;
                case Round.moves.Spock:
-                  ++this._spockUser;
+                  ++SpockUser;
                   break;
             }
 
@@ -96,25 +100,55 @@ namespace RockPaperScissors
             switch(game.CpuMove)
             {
                case Round.moves.Rock:
-                  ++this._rockCPU;
+                  ++RockCPU;
                   break;
                case Round.moves.Paper:
-                  ++this._paperCPU;
+                  ++PaperCPU;
                   break;
                case Round.moves.Scissors:
-                  ++this._scissorsCPU;
+                  ++ScissorsCPU;
                   break;
                case Round.moves.Lizard:
-                  ++this._lizardCPU;
+                  ++LizardCPU;
                   break;
                case Round.moves.Spock:
-                  ++this._spockCPU;
+                  ++SpockCPU;
                   break;
             }
          }
       }
 
-      #region Wins, Losses and Draws accessors and mutators
+      /// <summary>
+      /// Used to convert all of the stats to a string
+      /// </summary>
+      /// <returns>The string representation of all stats</returns>
+      public override string ToString()
+      {
+         string data = "";
+
+         data += "Game Stats"    + Environment.NewLine;
+         data += "\tWins: "      + this.wins + Environment.NewLine;
+         data += "\tLosses:"     + this.losses + Environment.NewLine;
+         data += "\tDraws: "     + this.draws + Environment.NewLine + Environment.NewLine;
+
+         data += "User move stats"        + Environment.NewLine;
+         data += "\tRock usage (%): "     + ((float)this.RockUser / (float)this.games) * 100 + Environment.NewLine;
+         data += "\tPaper usage (%):"     + ((float)this.PaperUser / (float)this.games) * 100 + Environment.NewLine;
+         data += "\tScissors usage (%): " + ((float)this.ScissorsUser / (float)this.games) * 100 + Environment.NewLine;
+         data += "\tLizard usage (%): "   + ((float)this.LizardUser / (float)this.games) * 100 + Environment.NewLine;
+         data += "\tSpock usage (%): "    + ((float)this.SpockUser / (float)this.games) * 100 + Environment.NewLine + Environment.NewLine;
+
+         data += "CPU move stats"         + Environment.NewLine;
+         data += "\tRock usage (%): "     + ((float)this.RockCPU / (float)this.games) * 100 + Environment.NewLine;
+         data += "\tPaper usage (%):"     + ((float)this.PaperCPU / (float)this.games) * 100 + Environment.NewLine;
+         data += "\tScissors usage (%): " + ((float)this.ScissorsCPU / (float)this.games) * 100 + Environment.NewLine;
+         data += "\tLizard usage (%): "   + ((float)this.LizardCPU / (float)this.games) * 100 + Environment.NewLine;
+         data += "\tSpock usage (%): "    + ((float)this.SpockCPU / (float)this.games) * 100 + Environment.NewLine + Environment.NewLine;
+
+         return data;
+      }
+
+      #region Basic game data accessors and mutators
 
       /// <summary>
       /// Accessor and mutator for _winsField
@@ -161,6 +195,21 @@ namespace RockPaperScissors
          }
       }
 
+      /// <summary>
+      /// Accessor and mutator for number of games
+      /// </summary>
+      public int games
+      {
+         get
+         {
+            return this._numberOfGames;
+         }
+         set
+         {
+            this._numberOfGames = value;
+         }
+      }
+
       #endregion
 
       #region CPU usage accessors and mutators
@@ -202,11 +251,11 @@ namespace RockPaperScissors
       {
          get
          {
-            return this.ScissorsCPU;
+            return this._scissorsCPU;
          }
          set
          {
-            this.ScissorsCPU = value;
+            this._scissorsCPU = value;
          }
       }
 
@@ -221,7 +270,7 @@ namespace RockPaperScissors
          }
          set
          {
-            this.LizardCPU = value;
+            this._lizardCPU = value;
          }
       }
 
@@ -281,11 +330,11 @@ namespace RockPaperScissors
       {
          get
          {
-            return this.ScissorsUser;
+            return this._scissorsUser;
          }
          set
          {
-            this.ScissorsUser = value;
+            this._scissorsUser = value;
          }
       }
 
@@ -300,7 +349,7 @@ namespace RockPaperScissors
          }
          set
          {
-            this.LizardUser = value;
+            this._lizardUser = value;
          }
       }
 
