@@ -66,7 +66,8 @@ namespace RockPaperScissors
       {
          Stats gameStats = new Stats();
          gameStats.generateStats(gameData);
-         MessageBox.Show(gameStats.ToString());
+         rtbResults.AppendText(gameStats.ToString());
+         rtbResults.ScrollToCaret();
       }
 
       /// <summary>
