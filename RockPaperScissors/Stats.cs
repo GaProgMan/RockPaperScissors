@@ -154,5 +154,163 @@ namespace RockPaperScissors
             this._drawsField = value;
          }
       }
+
+      #region CPU usage accessors and mutators
+
+      /// <summary>
+      /// Accessor and mutator for rock CPU usage
+      /// </summary>
+      public int RockCPU
+      {
+         get
+         {
+            return this._rockCPU;
+         }
+         set
+         {
+            this._rockCPU = value;
+         }
+      }
+
+      /// <summary>
+      /// Accessor and mutator for Paper CPU usage
+      /// </summary>
+      public int PaperCPU
+      {
+         get
+         {
+            return this._paperCPU;
+         }
+         set
+         {
+            this._paperCPU = value;
+         }
+      }
+
+      /// <summary>
+      /// Accessor and mutator for Scissors CPU usage
+      /// </summary>
+      public int ScissorsCPU
+      {
+         get
+         {
+            return this.ScissorsCPU;
+         }
+         set
+         {
+            this.ScissorsCPU = value;
+         }
+      }
+
+      /// <summary>
+      /// Accessor and mutator for Lizard CPU usage
+      /// </summary>
+      public int LizardCPU
+      {
+         get
+         {
+            return this._lizardCPU;
+         }
+         set
+         {
+            this.LizardCPU = value;
+         }
+      }
+
+      /// <summary>
+      /// Accessor and mutator for Spock CPU usage
+      /// </summary>
+      public int SpockCPU
+      {
+         get
+         {
+            return this._spockCPU;
+         }
+         set
+         {
+            this._spockCPU = value;
+         }
+      }
+
+      #endregion
+
+      #region User usage accessors and mutators
+
+      /// <summary>
+      /// Accessor and mutator for rock User usage
+      /// </summary>
+      public int RockUser
+      {
+         get
+         {
+            return this._rockUser;
+         }
+         set
+         {
+            this._rockUser = value;
+         }
+      }
+
+      /// <summary>
+      /// Accessor and mutator for Paper User usage
+      /// </summary>
+      public int PaperUser
+      {
+         get
+         {
+            return this._paperUser;
+         }
+         set
+         {
+            this._paperUser = value;
+         }
+      }
+
+      /// <summary>
+      /// Accessor and mutator for Scissors User usage
+      /// </summary>
+      public int ScissorsUser
+      {
+         get
+         {
+            return this.ScissorsUser;
+         }
+         set
+         {
+            this.ScissorsUser = value;
+         }
+      }
+
+      /// <summary>
+      /// Accessor and mutator for Lizard User usage
+      /// </summary>
+      public int LizardUser
+      {
+         get
+         {
+            return this._lizardUser;
+         }
+         set
+         {
+            this.LizardUser = value;
+         }
+      }
+
+      /// <summary>
+      /// Accessor and mutator for Spock User usage
+      /// </summary>
+      public int SpockUser
+      {
+         get
+         {
+            return this._spockUser;
+         }
+         set
+         {
+            this._spockUser = value;
+         }
+      }
+
+      #endregion
    }
 }
