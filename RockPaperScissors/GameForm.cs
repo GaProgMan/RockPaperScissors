@@ -54,6 +54,19 @@ namespace RockPaperScissors
 
          // Ensure we scroll to the end of the line
          rtbResults.ScrollToCaret();
+
+         if (gameData.Count >= 10)
+         {
+            btnGenerateStats.Enabled = true;
+            btnGenerateStats.Visible = true;
+         }
+      }
+
+      private void btnGenerateStats_Click(object sender, EventArgs e)
+      {
+         Stats gameStats = new Stats();
+         gameStats.generateStats(gameData);
+         MessageBox.Show(gameStats.ToString());
       }
 
       /// <summary>

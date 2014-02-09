@@ -109,6 +109,7 @@
          this.btnGenerateStats.Text = "Generate Stats";
          this.btnGenerateStats.UseVisualStyleBackColor = true;
          this.btnGenerateStats.Visible = false;
+         this.btnGenerateStats.Click += new System.EventHandler(this.btnGenerateStats_Click);
          // 
          // GameForm
          // 
