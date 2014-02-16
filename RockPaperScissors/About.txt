@@ -1,5 +1,5 @@
-A small Windows app that demonstrates the basic gameplay for Rock, Paper, Scissors, Lizard, Spock.
-
-Game image attribution: By DMacks [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC-BY-SA-3.0-2.5-2.0-1.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons. Original can be found at: http://commons.wikimedia.org/wiki/File%3APierre_ciseaux_feuille_l%C3%A9zard_spock_aligned.svg
+Game image attribution: By DMacks [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC-BY-SA-3.0-2.5-2.0-1.0 (http://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons.
 
 Penguin image provided by GaProgMan. Originall taken on 2013-08-10 at Sewerby Hall Zoo.
+
+A Windows app that demonstrates the basic gameplay for Rock, Paper, Scissors, Lizard, Spock.
