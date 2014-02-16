@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Rock, Paper, Scissors, Lizard, Spock")]
-[assembly: AssemblyDescription("A small Windows app that demonstrates the basic gameplay for Rock, Paper, Scissors, Lizard, Spock")]
+[assembly: AssemblyDescription("A small Windows app that demonstrates the basic gameplay for Rock, Paper, Scissors, Lizard, Spock. Game image taken from Wikipedia (used under CC BY-SA 3.0 license). Penguin image provided by GaProgMan")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Rock, Paper, Scissors, Lizard, Spock")]
