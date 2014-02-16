@@ -128,5 +128,11 @@ namespace RockPaperScissors
          ToolTip ttPictureToolTip = new ToolTip();
          ttPictureToolTip.SetToolTip(this.pbRules, "Image courtesy of Wikipedia");
       }
+
+      private void pbRules_Click(object sender, EventArgs e)
+      {
+         aboutForm about = new aboutForm();
+         about.Show();
+      }
    }
 }

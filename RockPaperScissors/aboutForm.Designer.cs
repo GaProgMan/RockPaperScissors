@@ -148,6 +148,7 @@
          this.okButton.Size = new System.Drawing.Size(75, 23);
          this.okButton.TabIndex = 24;
          this.okButton.Text = "&OK";
+         this.okButton.Click += new System.EventHandler(this.okButton_Click);
          // 
          // aboutForm
          // 
@@ -156,15 +157,15 @@
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          this.ClientSize = new System.Drawing.Size(435, 283);
          this.Controls.Add(this.tableLayoutPanel);
-         this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+         this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
          this.MaximizeBox = false;
          this.MinimizeBox = false;
          this.Name = "aboutForm";
          this.Padding = new System.Windows.Forms.Padding(9);
          this.ShowIcon = false;
          this.ShowInTaskbar = false;
-         this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-         this.Text = "aboutForm";
+         this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+         this.Text = "About";
          this.tableLayoutPanel.ResumeLayout(false);
          this.tableLayoutPanel.PerformLayout();
          ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
