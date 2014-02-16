@@ -19,7 +19,12 @@ namespace RockPaperScissors
          this.labelVersion.Text = String.Format("Version {0}", AssemblyVersion);
          this.labelCopyright.Text = AssemblyCopyright;
          this.labelCompanyName.Text = AssemblyCompany;
-         this.textBoxDescription.Text = AssemblyDescription;
+         //this.textBoxDescription.Text = AssemblyDescription;
+         System.IO.Stream fileStream = Assembly.GetExecutingAssembly().GetManifestResourceStream("RockPaperScissors.About.txt");
+         using (System.IO.StreamReader reader = new System.IO.StreamReader(fileStream))
+         {
+            this.textBoxDescription.Text = reader.ReadToEnd();
+         }
       }
 
       #region Assembly Attribute Accessors
