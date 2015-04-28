@@ -12,7 +12,7 @@ namespace RockPaperScissors
    public class Round
    {
       public enum moves { Rock, Paper, Scissors, Lizard, Spock };
-      public enum result { Win, Loss, Draw };
+      public enum result { Draw, Win, Loss };
 
       private moves _userMove;
       private moves _cpuMove;
@@ -84,7 +84,7 @@ namespace RockPaperScissors
       {
 		 // Default value - not caught by the switch or if statements
 		 // as there are too many possible instances
-		 this._result = draw;
+		 this._result = result.Draw;
          switch (_userMove)
          {
             case moves.Rock:
