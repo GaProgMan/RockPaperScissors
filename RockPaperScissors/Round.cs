@@ -80,8 +80,11 @@ namespace RockPaperScissors
       /// Used to calculate the result of the current round - storing
       /// it in the local restul variable
       /// </summary>
-      public void generateResult()
+      private void generateResult()
       {
+		 // Default value - not caught by the switch or if statements
+		 // as there are too many possible instances
+		 this._result = draw;
          switch (_userMove)
          {
             case moves.Rock:
@@ -118,7 +121,6 @@ namespace RockPaperScissors
                this._result = result.Draw;
                break;
          }
-         
       }
 
       /// <summary>
